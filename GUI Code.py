@@ -1,3 +1,4 @@
+#Libraries
 import tkinter as tk
 from PIL import Image, ImageTk
 
@@ -33,10 +34,10 @@ root.geometry("1500x1000")
 root.title("Coastal Map of the UK")
 
 # Path to the image file
-image_path = r"C:\Users\xarak\OneDrive\School Stuff\A-Level\Inversity Challenge\UK Map.png"
+image_path = r"C:\Users\xarak\OneDrive\School Stuff\A-Level\Inversity Challenge\Inversity_ICLMS\UK Map2.png"
 
 # Scale factor - 65% of the original size
-scale_factor = 0.65
+scale_factor = 0.45
 
 # Load and display the image - call the load_and_display_image function
 load_and_display_image(root, image_path, scale_factor)
