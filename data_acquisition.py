@@ -7,6 +7,7 @@ def main():
     database = "C:\\Users\\rishi\\Downloads\\UK_Seabed_Information.csv"
     dataframe = pandas.read_csv(database)
     
+    # Assigning Arbitrary Values for the Weights of the Data in Each Field
     average_depth_weight = -1
     stability_weight = 2
     proximity_weight = -1
