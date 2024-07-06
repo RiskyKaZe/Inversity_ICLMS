@@ -79,7 +79,7 @@ database_path = r"C:\Users\xarak\OneDrive\School Stuff\A-Level\Inversity Challen
 root.mainloop()
 
 
-
+#Function to read from the database
 def main(database_path):
      
     dataframe = pandas.read_csv(database_path)
@@ -87,6 +87,6 @@ def main(database_path):
           score = row["Score"]
           print
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
             
