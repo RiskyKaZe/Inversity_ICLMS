@@ -41,8 +41,11 @@ for column in df.columns[3:]:
 df['Score'] = 0
 for column, weight in weights.items():
     df['Score'] += df[column] * weight
+    
+df.to_csv("C:\\Users\\User\\Documents\\GitHub\\Inversity_ICLMS\\Database.csv", index=False)
 
 optimal_location = df.loc[df['Score'].idxmax()]
 
 print("The optimal location for an offshore wind farm is: ")
 print(optimal_location)
+
