@@ -1,11 +1,13 @@
 #Libraries
 import tkinter as tk
 from PIL import Image, ImageTk
-
-##Functions
+import pandas
 
 #List of Fonts 
 arial_large = ('Arial', 28)
+arial_medium = ('Arial', 20)
+
+##Functions
 
 # Function to load and display the image
 def load_and_display_image(root, image_path, scale_factor):
@@ -31,13 +33,19 @@ def enter_button_action():
         coordinates = Coordinate_Entry.get()
 
         #Outputs after enter is pressed
-        
+        score_label = tk.Label(root,
+                                text = "The score for the chosen location is: ",
+                                font = arial_medium)
+        #Places the score_label
+        score_label.place(x = 950, y= 250)
 
 
 ##Main Code
 # Create the main window which is going to be called root
 root = tk.Tk()
+#Set window size 
 root.geometry("1500x1000")
+#Set window title
 root.title("Coastal Map of the UK")
 
 # Path to the image file
@@ -65,4 +73,20 @@ Enter_button = tk.Button(root,
                         font = arial_large)
 Enter_button.place(x = 1200, y =50) 
 
+#The file path for the database
+database_path = r"C:\Users\xarak\OneDrive\School Stuff\A-Level\Inversity Challenge\Inversity_ICLMS\UK_Seabed_Information.csv"
+
 root.mainloop()
+
+
+
+def main(database_path):
+     
+     dataframe = pandas.read_csv(database_path)
+     for index, row in dataframe.iterrows():
+          score = row["Score"]
+          print
+
+if __name__ == "__main__":
+     main()
+          
