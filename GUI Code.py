@@ -1,7 +1,11 @@
+#Libraries
 import tkinter as tk
 from PIL import Image, ImageTk
 
 ##Functions
+
+#List of Fonts 
+arial_large = ('Arial', 28)
 
 # Function to load and display the image
 def load_and_display_image(root, image_path, scale_factor):
@@ -21,9 +25,13 @@ def load_and_display_image(root, image_path, scale_factor):
     label.image = tk_image  # Keep a reference to avoid garbage collection
     label.place(x = 50, y = 50)
 
-def enter_action():
+#The command executed when the enter button is pressed
+def enter_button_action():
+        #Get the contents of the text box and store them into 'coordinates'
         coordinates = Coordinate_Entry.get()
-        print("Entered coordinates:", coordinates)
+
+        #Outputs after enter is pressed
+        
 
 
 ##Main Code
@@ -33,21 +41,28 @@ root.geometry("1500x1000")
 root.title("Coastal Map of the UK")
 
 # Path to the image file
-image_path = r"C:\Users\xarak\OneDrive\School Stuff\A-Level\Inversity Challenge\UK Map.png"
+image_path = r"C:\Users\xarak\OneDrive\School Stuff\A-Level\Inversity Challenge\Inversity_ICLMS\UK Map2.png"
 
-# Scale factor - 65% of the original size
-scale_factor = 0.65
+# Scale factor - 45% of the original size
+scale_factor = 0.45
 
 # Load and display the image - call the load_and_display_image function
 load_and_display_image(root, image_path, scale_factor)
 
 #Make an entry box to enter the grid reference
-Coordinate_Entry = tk.Entry(root, text="") 
+Coordinate_Entry = tk.Entry(root, 
+                            text = "",
+                            font = arial_large,
+                            width = 7
+                            ) 
 #Place the entry box 
-Coordinate_Entry.place(x = 1000, y = 50)
+Coordinate_Entry.place(x = 1000, y = 55)
  
 #Make a button to submit the grid reference
-Enter_button = tk.Button(root, text="Enter", command=enter_action)
-Enter_button.place(x = 1200, y =50)
- 
+Enter_button = tk.Button(root,
+                        text = "Enter",
+                        command = enter_button_action,
+                        font = arial_large)
+Enter_button.place(x = 1200, y =50) 
+
 root.mainloop()
