@@ -82,11 +82,11 @@ root.mainloop()
 
 def main(database_path):
      
-     dataframe = pandas.read_csv(database_path)
-     for index, row in dataframe.iterrows():
+    dataframe = pandas.read_csv(database_path)
+    for index, row in dataframe.iterrows():
           score = row["Score"]
           print
 
-if __name__ == "__main__":
-     main()
-          
+    if __name__ == "__main__":
+        main()
+            
