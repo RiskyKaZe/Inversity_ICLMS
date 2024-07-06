@@ -1,0 +1,19 @@
+Location_Name,Latitude,Longitude,Average_Wind_Speed,Wind_Consistency,Average_Depth,Average_Population_Density_of_Fish,Average_Population_Density_of_Birds,Number_of_Wildlife_Migration_Paths,Average_Wave_Height,Stability
+Dogger Bank,54.5,1.5,9.5,8,24.5,1500,50,3,2,3
+North Sea,55,2,9,7,35.7,2000,60,5,2.5,0
+Celtic Sea,50,-6,8.5,7,73.2,2500,70,4,3,-3
+Irish Sea,53.5,-4.5,8,6,42.6,1800,55,4,2,0
+English Channel,50.5,-2,7.5,6,25.4,1700,65,6,1.5,3
+Bristol Channel,51.5,-3.5,7,5,32.8,1600,50,3,1.5,-3
+Moray Firth,58,-3,9,8,80.3,2200,75,5,3,3
+Firth of Forth,56,-2.5,8,7,35.9,1900,65,4,2.5,0
+Solent,50.8,-1.3,6.5,5,14.7,1500,45,3,1,3
+Shetland Shelf,60,-1,10,8,145.6,2300,80,6,3.5,3
+Orkney Waters,59,-3,9,8,76.4,2200,75,5,3,3
+Western Approaches,49.5,-5,8.5,7,128.3,2000,70,4,3.5,0
+Hebrides Shelf,57.5,-7,9,8,89.1,2400,75,5,3,3
+St George's Channel,52,-5.5,8,7,76.3,2100,60,4,2,-3
+The Minch,58,-6,8.5,7,78.5,2300,80,5,3,3
+Outer Thames Estuary,51.8,1.5,7.5,6,22.8,1600,55,6,1.5,0
+North Channel,54.8,-5.5,8,7,34.2,1900,65,4,2.5,0
+Rockall Trough,57,-13,10,9,650.5,2500,85,7,4,3

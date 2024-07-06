@@ -1,0 +1,48 @@
+import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('Database.csv')
+
+# Define the weights for each criterion
+
+while True:
+    try:
+        e = float(input("Enter a value for the weight of economics: "))
+        h = float(input("Enter a value for the weight of habitat: "))
+        m = float(input("Enter a value for the weight of maintenance: "))
+        break  # Exit the loop if all inputs are valid floats
+    except ValueError:
+        print("Invalid input! Please enter a valid floating-point number.")
+
+# Now you can use e, h, and m variables which contain the validated float values
+
+#defining weights in terms of economic factors, habitat factors, and maintenance factors
+weights = {
+    "Average_Wind_Speed": float(e),  # Positive weight because higher wind speeds are better
+    "Wind_Consistency": float(e),  # Positive weight because higher consistency is better
+    "Average_Depth": -float(e),  # Negative weight because lower depths are preferable
+    "Average_Population_Density_of_Fish": -float(h),  # Negative weight because lower densities are better
+    "Average_Population_Density_of_Birds": -float(h), # Negative weight because lower densities are better 
+    "Number_of_Wildlife_Migration_Paths": -float(h),  # Negative weight because fewer paths are better
+    "Average_Wave_Height": -float(m),  # Negative weight because moderate wave heights are preferable
+    "Stability": float(m),  # Higher weight for stable seabeds
+    
+}
+
+# Normalize the data
+for column in df.columns[3:]:
+    df[column] = (df[column] - df[column].min()) / (df[column].max() - df[column].min())
+    df['Score'] = 0
+    for column, weight in weights.items():
+        df['Score'] += df[column] * weight
+
+
+# Calculate the score for each location
+df['Score'] = 0
+for column, weight in weights.items():
+    df['Score'] += df[column] * weight
+
+optimal_location = df.loc[df['Score'].idxmax()]
+
+print("The optimal location for an offshore wind farm is: ")
+print(optimal_location)
